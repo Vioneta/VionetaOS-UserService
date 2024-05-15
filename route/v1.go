@@ -4,10 +4,10 @@ import (
 	"crypto/ecdsa"
 	"os"
 
-	"github.com/IceWhaleTech/CasaOS-Common/middleware"
-	"github.com/IceWhaleTech/CasaOS-Common/utils/jwt"
-	v1 "github.com/IceWhaleTech/CasaOS-UserService/route/v1"
-	"github.com/IceWhaleTech/CasaOS-UserService/service"
+	"github.com/Vioneta/VionetaOS-Common/middleware"
+	"github.com/Vioneta/VionetaOS-Common/utils/jwt"
+	v1 "github.com/Vioneta/VionetaOS-UserService/route/v1"
+	"github.com/Vioneta/VionetaOS-UserService/service"
 	"github.com/gin-contrib/gzip"
 	"github.com/gin-gonic/gin"
 )

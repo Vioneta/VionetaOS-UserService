@@ -12,10 +12,10 @@ package sqlite
 import (
 	"time"
 
-	"github.com/IceWhaleTech/CasaOS-Common/utils/logger"
-	"github.com/IceWhaleTech/CasaOS-UserService/model"
-	"github.com/IceWhaleTech/CasaOS-UserService/pkg/utils/file"
-	model2 "github.com/IceWhaleTech/CasaOS-UserService/service/model"
+	"github.com/Vioneta/VionetaOS-Common/utils/logger"
+	"github.com/Vioneta/VionetaOS-UserService/model"
+	"github.com/Vioneta/VionetaOS-UserService/pkg/utils/file"
+	model2 "github.com/Vioneta/VionetaOS-UserService/service/model"
 	"github.com/glebarez/sqlite"
 	"go.uber.org/zap"
 	"gorm.io/gorm"
