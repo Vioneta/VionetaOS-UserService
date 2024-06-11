@@ -12,7 +12,7 @@ require (
 	github.com/glebarez/sqlite v1.8.0
 	github.com/labstack/echo/v4 v4.10.2
 	github.com/satori/go.uuid v1.2.0
-	github.com/tidwall/gjson v1.14.4
+	github.com/tidwall/gjson v1.17.0
 	go.uber.org/zap v1.24.0
 	golang.org/x/net v0.17.0
 	golang.org/x/time v0.3.0
@@ -62,7 +62,7 @@ require (
 	github.com/remyoudompheng/bigfft v0.0.0-20230129092748-24d4a6f8daec // indirect
 	github.com/rogpeppe/go-internal v1.10.0 // indirect
 	github.com/samber/lo v1.38.1 // indirect
-	github.com/stretchr/testify v1.8.4 // indirect
+	github.com/stretchr/testify v1.9.0 // indirect
 	github.com/tidwall/match v1.1.1 // indirect
 	github.com/tidwall/pretty v1.2.1 // indirect
 	github.com/twitchyliquid64/golang-asm v0.15.1 // indirect

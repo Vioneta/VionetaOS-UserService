@@ -12,6 +12,6 @@ jobs:
     with:
       project-name: VionetaOS-UserService
       file-name: vionetaos-user-service
-    secrets:
-      OSS_KEY_ID: ${{ secrets.OSS_KEY_ID }}
-      OSS_KEY_SECRET: ${{ secrets.OSS_KEY_SECRET }}
+    # secrets:
+    #   OSS_KEY_ID: ${{ secrets.OSS_KEY_ID }}
+    #   OSS_KEY_SECRET: ${{ secrets.OSS_KEY_SECRET }}
