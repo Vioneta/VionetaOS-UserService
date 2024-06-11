@@ -5,22 +5,22 @@ info:
   version: v2
   description: |
     <picture>
-         <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/IceWhaleTech/logo/main/casaos/casaos_banner_dark_night_800px.png">
-         <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/IceWhaleTech/logo/main/casaos/casaos_banner_twilight_blue_800px.png">
-         <img alt="CasaOS" src="https://raw.githubusercontent.com/IceWhaleTech/logo/main/casaos/casaos_banner_twilight_blue_800px.png">
+         <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Vioneta/logo/main/vionetaos/vionetaos_banner_dark_night_800px.png">
+         <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Vioneta/logo/main/vionetaos/vionetaos_banner_twilight_blue_800px.png">
+         <img alt="VionetaOS" src="https://raw.githubusercontent.com/Vioneta/logo/main/vionetaos/vionetaos_banner_twilight_blue_800px.png">
      </picture>
      This is the API for the Casaos User Service.
      It is used to manage users and their access to Casaos services.
 
 servers:
-  - url: /v2/users
-    description: Casaos User Service API
+- url: /v2/users
+  description: Casaos User Service API
 
 tags:
-  - name: event
-    description: Event related operations
+- name: event
+  description: Event related operations
 security:
-  - access_token: []
+- access_token: []
 
 paths:
   /event/{event_uuid}:
@@ -29,9 +29,9 @@ paths:
       description: Delete an event
       operationId: deleteEvent
       tags:
-        - event
+      - event
       parameters:
-        - $ref: "#/components/parameters/event_uuid"
+      - $ref: "#/components/parameters/event_uuid"
 
       responses:
         "200":
@@ -52,16 +52,16 @@ paths:
       description: Get all events
       operationId: getEvents
       tags:
-        - event
+      - event
       parameters:
-        - name: form
-          in: query
-          description: Form of the events to get
-          required: false
-          schema:
-            type: string
-            format: date-time
-            example: "2021-01-01T00:00:00Z"
+      - name: form
+        in: query
+        description: Form of the events to get
+        required: false
+        schema:
+          type: string
+          format: date-time
+          example: "2021-01-01T00:00:00Z"
       responses:
         "200":
           description: Events found
@@ -80,9 +80,9 @@ paths:
       description: Delete an event
       operationId: deleteEventBySerial
       tags:
-        - event
+      - event
       parameters:
-        - $ref: "#/components/parameters/serial"
+      - $ref: "#/components/parameters/serial"
       responses:
         "200":
           description: Event deleted
@@ -169,9 +169,9 @@ components:
     Event:
       type: object
       required:
-        - "sourceID"
-        - "name"
-        - "properties"
+      - "sourceID"
+      - "name"
+      - "properties"
       properties:
         event_uuid:
           type: string
@@ -191,20 +191,20 @@ components:
           items:
             $ref: "#/components/schemas/Property"
           example:
-            - name: local-storage:vendor
-              value: SanDisk
-            - name: local-storage:model
-              value: Cruzer
-            - name: local-storage:uuid
-              value: 442e0e5b-9d3e-4fe8-b46f-9c4141fdecd7
-            - name: casaos-ui:type
-              value: notification-style-2
-            - name: casaos-ui:title
-              value: "New disk found"
-            - name: casaos-ui:icon-1
-              value: casaos-icon-disk
-            - name: casaos-ui:message-1
-              value: "A new disk, SanDisk Cruzer, is added."
+          - name: local-storage:vendor
+            value: SanDisk
+          - name: local-storage:model
+            value: Cruzer
+          - name: local-storage:uuid
+            value: 442e0e5b-9d3e-4fe8-b46f-9c4141fdecd7
+          - name: vionetaos-ui:type
+            value: notification-style-2
+          - name: vionetaos-ui:title
+            value: "New disk found"
+          - name: vionetaos-ui:icon-1
+            value: vionetaos-icon-disk
+          - name: vionetaos-ui:message-1
+            value: "A new disk, SanDisk Cruzer, is added."
         timestamp:
           type: string
           description: timestamp this event took place

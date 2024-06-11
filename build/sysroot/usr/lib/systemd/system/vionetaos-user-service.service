@@ -1,0 +1,13 @@
+[Unit]
+After=vionetaos-message-bus.service
+Description=VionetaOS User Service
+
+[Service]
+ExecStartPre=/usr/bin/vionetaos-user-service -v
+ExecStart=/usr/bin/vionetaos-user-service -c /etc/vionetaos/user-service.conf
+PIDFile=/var/run/vionetaos/user-service.pid
+Restart=always
+Type=notify
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,9 @@
+[common]
+RuntimePath=/var/run/vionetaos
+
+[app]
+LogPath = /var/log/vionetaos
+LogSaveName = user-service
+LogFileExt = log
+DBPath     = /var/lib/vionetaos/db
+UserDataPath = /var/lib/vionetaos

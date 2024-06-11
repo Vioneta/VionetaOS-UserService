@@ -2,18 +2,18 @@
 
 set -e
 
-readonly CASA_EXEC=casaos-user-service
-readonly CASA_SERVICE=casaos-user-service.service
+readonly CASA_EXEC=vionetaos-user-service
+readonly CASA_SERVICE=vionetaos-user-service.service
 
 CASA_SERVICE_PATH=$(systemctl show ${CASA_SERVICE} --no-pager  --property FragmentPath | cut -d'=' -sf2)
 readonly CASA_SERVICE_PATH
 
 CASA_CONF=$( grep -i ExecStart= "${CASA_SERVICE_PATH}" | cut -d'=' -sf2 | cut -d' ' -sf3)
 if [[ -z "${CASA_CONF}" ]]; then
-    CASA_CONF=/etc/casaos/user-service.conf
+    CASA_CONF=/etc/vionetaos/user-service.conf
 fi
 
-CASA_DB_PATH=$( (grep -i dbpath "${CASA_CONF}" || echo "/var/lib/casaos/db") | cut -d'=' -sf2 | xargs )
+CASA_DB_PATH=$( (grep -i dbpath "${CASA_CONF}" || echo "/var/lib/vionetaos/db") | cut -d'=' -sf2 | xargs )
 readonly CASA_DB_PATH
 
 CASA_DB_FILE=${CASA_DB_PATH}/user-service.db
@@ -105,5 +105,5 @@ fi
 
 if [[ "${REMOVE_USER_DIRECTORY}" == true ]]; then
     Show 2 "Removing user directories..."
-    rm -rvf /var/lib/casaos/[1-9]*
+    rm -rvf /var/lib/vionetaos/[1-9]*
 fi

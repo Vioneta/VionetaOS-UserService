@@ -12,13 +12,13 @@ import (
 )
 
 const (
-	userServiceConfigDirPath  = "/etc/casaos"
-	userServiceConfigFilePath = "/etc/casaos/user-service.conf"
-	userServiceName           = "casaos-user-service.service"
+	userServiceConfigDirPath  = "/etc/vionetaos"
+	userServiceConfigFilePath = "/etc/vionetaos/user-service.conf"
+	userServiceName           = "vionetaos-user-service.service"
 	userServiceNameShort      = "user-service"
 )
 
-//go:embedded ../../build/sysroot/etc/casaos/user-service.conf.sample
+//go:embedded ../../build/sysroot/etc/vionetaos/user-service.conf.sample
 //var _userServiceConfigFileSample string
 
 var (

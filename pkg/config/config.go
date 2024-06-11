@@ -1,5 +1,5 @@
 package config
 
 const (
-	UserServiceConfigFilePath = "/etc/casaos/user-service.conf"
+	UserServiceConfigFilePath = "/etc/vionetaos/user-service.conf"
 )

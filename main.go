@@ -1,5 +1,5 @@
 //go:generate bash -c "mkdir -p codegen/user_service && go run github.com/deepmap/oapi-codegen/cmd/oapi-codegen@v1.12.4 -generate types,server,spec -package codegen api/user-service/openapi.yaml > codegen/user_service/user_service_api.go"
-//go:generate bash -c "mkdir -p codegen/message_bus && go run github.com/deepmap/oapi-codegen/cmd/oapi-codegen@v1.12.4 -package message_bus https://raw.githubusercontent.com/IceWhaleTech/CasaOS-MessageBus/main/api/message_bus/openapi.yaml > codegen/message_bus/api.go"
+//go:generate bash -c "mkdir -p codegen/message_bus && go run github.com/deepmap/oapi-codegen/cmd/oapi-codegen@v1.12.4 -package message_bus https://raw.githubusercontent.com/Vioneta/VionetaOS-MessageBus/main/api/message_bus/openapi.yaml > codegen/message_bus/api.go"
 package main
 
 import (
@@ -43,7 +43,7 @@ var (
 	//go:embed api/user-service/openapi.yaml
 	_docYAML string
 
-	//go:embed build/sysroot/etc/casaos/user-service.conf.sample
+	//go:embed build/sysroot/etc/vionetaos/user-service.conf.sample
 	_confSample string
 )
 
