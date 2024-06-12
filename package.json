@@ -6,7 +6,7 @@
     "generate:local": "openapi-generator-cli generate -g typescript-axios -i ./api/user-service/openapi.yaml -o ./generate",
     "generate:npx": "npx @openapitools/openapi-generator-cli generate -g typescript-axios -i ./api/user-service/openapi.yaml -o ./generate",
     "generate:ts": "npx openapi-typescript-codegen --input ./api/user-service/openapi.yaml --output ./generate",
-    "publish": "npm publish --access public",
+    "publish": "npm publish ",
     "start": "yarn generate:ts && yarn build"
   },
   "homepage": "https://github.com/Vioneta/VionetaOS-UserService#readme",
